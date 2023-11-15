@@ -6,32 +6,53 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct StartMenu: View {
+    @State private var isGameViewPresented = false
+
     var body: some View {
-        VStack {
-            Text("Welcome to Penguin Clicker")
-                .font(.title)
-                .padding()
+        NavigationView {
+            VStack {
+                Text("Welcome to Penguin Clicker")
+                    .font(.title)
+                    .padding()
 
-            Spacer()
+                NavigationLink(destination: Game(), isActive: $isGameViewPresented) {
+                    EmptyView()
+                }
+                .hidden()
 
-            Button(action: {
-                // navigate to game
-            }) {
-                Text("Play")
+                Image("penguin")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150, height: 150)
+                    .onTapGesture {
+                        isGameViewPresented = true
+                    }
+
+                Text("Click the penguin to start the game!")
                     .font(.headline)
                     .padding()
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-                    
-            }
-            .frame(width: 200, height:100)
-            .padding()
 
-            Spacer()
+                Spacer()
+
+                Button(action: {
+                    // Navigate to game
+                    isGameViewPresented = true
+                }) {
+                    Text("Start")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .frame(width: 200, height: 50)
+                .padding()
+
+                Spacer()
+            }
+            .navigationTitle("Penguin Clicker")
         }
     }
 }
