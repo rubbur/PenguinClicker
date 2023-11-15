@@ -13,7 +13,7 @@ struct PenguinClickerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartMenu()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
