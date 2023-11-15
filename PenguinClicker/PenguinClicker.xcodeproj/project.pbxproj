@@ -13,6 +13,7 @@
 		74865B7B2B04AABF00ED214C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74865B7A2B04AABF00ED214C /* Persistence.swift */; };
 		74865B7E2B04AABF00ED214C /* PenguinClicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74865B7C2B04AABF00ED214C /* PenguinClicker.xcdatamodeld */; };
 		74CCDC8E2B04B13700843CE2 /* StartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCDC8D2B04B13700843CE2 /* StartMenu.swift */; };
+		74CCDC912B04C1C900843CE2 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCDC902B04C1C800843CE2 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		74865B7D2B04AABF00ED214C /* PenguinClicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PenguinClicker.xcdatamodel; sourceTree = "<group>"; };
 		74865B7F2B04AABF00ED214C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74CCDC8D2B04B13700843CE2 /* StartMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMenu.swift; sourceTree = "<group>"; };
+		74CCDC902B04C1C800843CE2 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				74865B7F2B04AABF00ED214C /* Info.plist */,
 				74865B7C2B04AABF00ED214C /* PenguinClicker.xcdatamodeld */,
 				74865B772B04AABF00ED214C /* Preview Content */,
+				74CCDC902B04C1C800843CE2 /* Game.swift */,
 			);
 			path = PenguinClicker;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74865B7B2B04AABF00ED214C /* Persistence.swift in Sources */,
+				74CCDC912B04C1C900843CE2 /* Game.swift in Sources */,
 				74CCDC8E2B04B13700843CE2 /* StartMenu.swift in Sources */,
 				74865B7E2B04AABF00ED214C /* PenguinClicker.xcdatamodeld in Sources */,
 				74865B722B04AABA00ED214C /* PenguinClickerApp.swift in Sources */,
