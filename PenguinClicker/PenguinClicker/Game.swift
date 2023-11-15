@@ -26,6 +26,10 @@ struct Game: View {
                 .padding()
 
             Spacer()
+
+            Text("Michael Mathews - CSC680-01")
+                    .font(.footnote)
+                    .padding()
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton())
