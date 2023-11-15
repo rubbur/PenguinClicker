@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		74865B722B04AABA00ED214C /* PenguinClickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74865B712B04AABA00ED214C /* PenguinClickerApp.swift */; };
-		74865B742B04AABA00ED214C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74865B732B04AABA00ED214C /* ContentView.swift */; };
 		74865B762B04AABF00ED214C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74865B752B04AABF00ED214C /* Assets.xcassets */; };
 		74865B792B04AABF00ED214C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74865B782B04AABF00ED214C /* Preview Assets.xcassets */; };
 		74865B7B2B04AABF00ED214C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74865B7A2B04AABF00ED214C /* Persistence.swift */; };
 		74865B7E2B04AABF00ED214C /* PenguinClicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74865B7C2B04AABF00ED214C /* PenguinClicker.xcdatamodeld */; };
+		74CCDC8E2B04B13700843CE2 /* StartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCDC8D2B04B13700843CE2 /* StartMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		74865B6E2B04AABA00ED214C /* PenguinClicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinClicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74865B712B04AABA00ED214C /* PenguinClickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinClickerApp.swift; sourceTree = "<group>"; };
-		74865B732B04AABA00ED214C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		74865B752B04AABF00ED214C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74865B782B04AABF00ED214C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74865B7A2B04AABF00ED214C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		74865B7D2B04AABF00ED214C /* PenguinClicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PenguinClicker.xcdatamodel; sourceTree = "<group>"; };
 		74865B7F2B04AABF00ED214C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74CCDC8D2B04B13700843CE2 /* StartMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,8 @@
 		74865B702B04AABA00ED214C /* PenguinClicker */ = {
 			isa = PBXGroup;
 			children = (
+				74CCDC8D2B04B13700843CE2 /* StartMenu.swift */,
 				74865B712B04AABA00ED214C /* PenguinClickerApp.swift */,
-				74865B732B04AABA00ED214C /* ContentView.swift */,
 				74865B752B04AABF00ED214C /* Assets.xcassets */,
 				74865B7A2B04AABF00ED214C /* Persistence.swift */,
 				74865B7F2B04AABF00ED214C /* Info.plist */,
@@ -145,7 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74865B7B2B04AABF00ED214C /* Persistence.swift in Sources */,
-				74865B742B04AABA00ED214C /* ContentView.swift in Sources */,
+				74CCDC8E2B04B13700843CE2 /* StartMenu.swift in Sources */,
 				74865B7E2B04AABF00ED214C /* PenguinClicker.xcdatamodeld in Sources */,
 				74865B722B04AABA00ED214C /* PenguinClickerApp.swift in Sources */,
 			);

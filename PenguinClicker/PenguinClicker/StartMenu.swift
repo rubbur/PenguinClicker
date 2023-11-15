@@ -20,13 +20,15 @@ struct StartMenu: View {
             Button(action: {
                 // navigate to game
             }) {
-                Text("Start")
+                Text("Play")
                     .font(.headline)
                     .padding()
                     .foregroundColor(.white)
                     .background(Color.blue)
                     .cornerRadius(10)
+                    
             }
+            .frame(width: 200, height:100)
             .padding()
 
             Spacer()
