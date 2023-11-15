@@ -17,19 +17,6 @@ struct StartMenu: View {
                     .font(.title)
                     .padding()
 
-                NavigationLink(destination: Game(), isActive: $isGameViewPresented) {
-                    EmptyView()
-                }
-                .hidden()
-
-                Image("penguin")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 150, height: 150)
-                    .onTapGesture {
-                        isGameViewPresented = true
-                    }
-
                 Text("Click the penguin to start collecting coins!")
                     .font(.headline)
                     .padding()
@@ -40,7 +27,8 @@ struct StartMenu: View {
                     .font(.footnote)
                     .padding()
             }
-            .navigationTitle("Penguin Clicker")
+            .navigationBarHidden(true)
+            .navigationTitle("")
         }
     }
 }
