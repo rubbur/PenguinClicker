@@ -16,7 +16,7 @@ struct Game: View {
             Image("penguin") // image file is named "penguin.png"
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 150) 
+                .frame(width: 150, height: 150)
                 .onTapGesture {
                     clickCount += 1
                 }
@@ -33,15 +33,16 @@ struct Game: View {
 }
 
 struct BackButton: View {
-    var label: String
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         Button(action: {
-        
+            // Go back to the StartMenu view
+            presentationMode.wrappedValue.dismiss()
         }) {
             HStack {
-                Image(systemName: "arrow.left.circle.fill") 
-                Text(label)
+                Image(systemName: "arrow.left.circle.fill")
+                Text("Go Back")
             }
         }
     }
@@ -52,3 +53,4 @@ struct Game_Previews: PreviewProvider {
         Game()
     }
 }
+
