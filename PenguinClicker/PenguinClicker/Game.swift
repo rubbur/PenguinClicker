@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Game: View {
     @State private var clickCount = 0
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         VStack {
@@ -27,15 +28,16 @@ struct Game: View {
             Spacer()
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: BackButton(label: "Go Back"))
+        .navigationBarItems(leading: BackButton())
     }
 }
 
-struct CustomBackButton: View {
+struct BackButton: View {
     var label: String
 
     var body: some View {
         Button(action: {
+        
         }) {
             HStack {
                 Image(systemName: "arrow.left.circle.fill") 

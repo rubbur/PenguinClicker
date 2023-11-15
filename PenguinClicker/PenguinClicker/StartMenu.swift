@@ -16,6 +16,19 @@ struct StartMenu: View {
                 Text("Welcome to Penguin Clicker")
                     .font(.title)
                     .padding()
+                
+                NavigationLink(destination: Game(), isActive: $isGameViewPresented) {
+                    EmptyView()
+                }
+                .hidden()
+                
+                Image("penguin")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 200, height: 200)
+                    .onTapGesture {
+                        isGameViewPresented = true
+                    }
 
                 Text("Click the penguin to start collecting coins!")
                     .font(.headline)
