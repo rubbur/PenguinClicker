@@ -12,10 +12,6 @@ struct Game: View {
 
     var body: some View {
         VStack {
-            Text("Penguin Clicker Game")
-                .font(.title)
-                .padding()
-
             Image("penguin") // image file is named "penguin.png"
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -29,6 +25,22 @@ struct Game: View {
                 .padding()
 
             Spacer()
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButton(label: "Go Back"))
+    }
+}
+
+struct CustomBackButton: View {
+    var label: String
+
+    var body: some View {
+        Button(action: {
+        }) {
+            HStack {
+                Image(systemName: "arrow.left.circle.fill") 
+                Text(label)
+            }
         }
     }
 }
