@@ -24,7 +24,7 @@ struct Game: View {
                     clickCount += 1
                 }
 
-            Text("Click Count: \(clickCount)")
+            Text("Coins: \(clickCount)")
                 .font(.headline)
                 .padding()
 

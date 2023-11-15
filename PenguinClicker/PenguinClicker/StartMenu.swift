@@ -30,27 +30,15 @@ struct StartMenu: View {
                         isGameViewPresented = true
                     }
 
-                Text("Click the penguin to start the game!")
+                Text("Click the penguin to start collecting coins!")
                     .font(.headline)
                     .padding()
 
                 Spacer()
 
-                Button(action: {
-                    // Navigate to game
-                    isGameViewPresented = true
-                }) {
-                    Text("Start")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                }
-                .frame(width: 200, height: 50)
-                .padding()
-
-                Spacer()
+                Text("Michael Mathews - CSC680-01")
+                    .font(.footnote)
+                    .padding()
             }
             .navigationTitle("Penguin Clicker")
         }
