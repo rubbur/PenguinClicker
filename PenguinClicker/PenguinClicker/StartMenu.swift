@@ -29,16 +29,23 @@ struct StartMenu: View {
                     .onTapGesture {
                         isGameViewPresented = true
                     }
-
+                
+                
                 Text("Click the penguin to start collecting coins!")
                     .font(.headline)
                     .padding()
-
+                    .foregroundColor(.white)
+                Color.blue
                 Spacer()
-
+                
+                ZStack{
+                    Color.black
                 Text("Michael Mathews - CSC680-01")
                     .font(.footnote)
                     .padding()
+                    .foregroundColor(.white)
+                }
+                
             }
             .navigationBarHidden(true)
             .navigationTitle("")
