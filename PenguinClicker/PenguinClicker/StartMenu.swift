@@ -12,43 +12,47 @@ struct StartMenu: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Welcome to Penguin Clicker")
-                    .font(.title)
-                    .padding()
-                
-                NavigationLink(destination: Game(), isActive: $isGameViewPresented) {
-                    EmptyView()
-                }
-                .hidden()
-                
-                Image("penguin")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 200, height: 200)
-                    .onTapGesture {
-                        isGameViewPresented = true
-                    }
-                
-                
-                Text("Click the penguin to start collecting coins!")
-                    .font(.headline)
-                    .padding()
-                    .foregroundColor(.white)
+            ZStack {
                 Color.blue
-                Spacer()
+                    .ignoresSafeArea() // Extend the background color
                 
-                ZStack{
-                    Color.black
-                Text("Michael Mathews - CSC680-01")
-                    .font(.footnote)
-                    .padding()
-                    .foregroundColor(.white)
+                VStack {
+                    Text("Welcome to Penguin Clicker")
+                        .font(.title)
+                        .padding()
+                    
+                    NavigationLink(destination: Game(), isActive: $isGameViewPresented) {
+                        EmptyView()
+                    }
+                    .hidden()
+                    
+                    Image("penguin")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
+                        .onTapGesture {
+                            isGameViewPresented = true
+                        }
+                    
+                    Text("Click the penguin to start collecting coins!")
+                        .font(.headline)
+                        .padding()
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    // Other content
+                    
+                    // Footer
+                    Text("Michael Mathews - CSC680-01")
+                        .font(.footnote)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.black)
                 }
-                
+                .navigationBarHidden(true)
+                .navigationTitle("")
             }
-            .navigationBarHidden(true)
-            .navigationTitle("")
         }
     }
 }
