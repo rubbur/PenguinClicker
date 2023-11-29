@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class UserDataManager {
+class UserDataManager: ObservableObject {
     static let shared = UserDataManager()
 
     private init() {}
@@ -17,7 +17,7 @@ class UserDataManager {
 
 struct Game: View {
     @State private var clickCount: Int = 0
-    @StateObject private var userDataManager = UserDataManager.shared
+    @ObservedObject private var userDataManager = UserDataManager.shared
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -34,7 +34,10 @@ struct Game: View {
             Text("Coins: \(userDataManager.coinCount)")
                 .font(.headline)
                 .padding()
-
+            
+            Text("Click here to hire Grandpa (100 Coins)")
+                .padding()
+            
             Spacer()
 
             Text("Michael Mathews - CSC680-01")
