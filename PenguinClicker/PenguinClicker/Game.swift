@@ -6,20 +6,22 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct Game: View {
-    @State private var clickCount: Int = UserDefaults.standard.integer(forKey: "penguinCoinCount")
+    @State private var clickCount: Int = 0
+    @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         VStack {
-            Image("penguin") // image file is named "penguin.png"
+            Image("penguin")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 150)
                 .onTapGesture {
                     clickCount += 1
-                    UserDefaults.standard.set(clickCount, forKey: "penguinCoinCount")
+                    saveCoinCount()
                 }
 
             Text("Coins: \(clickCount)")
@@ -29,11 +31,45 @@ struct Game: View {
             Spacer()
 
             Text("Michael Mathews - CSC680-01")
-                    .font(.footnote)
-                    .padding()
+                .font(.footnote)
+                .padding()
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton())
+        .onAppear {
+            loadCoinCount()
+        }
+    }
+
+    private func saveCoinCount() {
+        do {
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
+            let players = try viewContext.fetch(request) as! [Player]
+
+            if let player = players.first {
+                player.coinCount = Int16(clickCount)
+            } else {
+                let newPlayer = Player(context: viewContext)
+                newPlayer.coinCount = Int16(clickCount)
+            }
+
+            try viewContext.save()
+        } catch {
+            print("Error saving coin count: \(error.localizedDescription)")
+        }
+    }
+
+    private func loadCoinCount() {
+        do {
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
+            let players = try viewContext.fetch(request) as! [Player]
+
+            if let player = players.first {
+                clickCount = Int(player.coinCount)
+            }
+        } catch {
+            print("Error loading coin count: \(error.localizedDescription)")
+        }
     }
 }
 
@@ -56,6 +92,6 @@ struct BackButton: View {
 struct Game_Previews: PreviewProvider {
     static var previews: some View {
         Game()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
-
