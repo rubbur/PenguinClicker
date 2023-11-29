@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74865B6E2B04AABA00ED214C /* PenguinClicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PenguinClicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74865B6E2B04AABA00ED214C /* Penguin Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Penguin Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74865B712B04AABA00ED214C /* PenguinClickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenguinClickerApp.swift; sourceTree = "<group>"; };
 		74865B752B04AABF00ED214C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74865B782B04AABF00ED214C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		74865B6F2B04AABA00ED214C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74865B6E2B04AABA00ED214C /* PenguinClicker.app */,
+				74865B6E2B04AABA00ED214C /* Penguin Clicker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 			);
 			name = PenguinClicker;
 			productName = PenguinClicker;
-			productReference = 74865B6E2B04AABA00ED214C /* PenguinClicker.app */;
+			productReference = 74865B6E2B04AABA00ED214C /* Penguin Clicker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -293,7 +293,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SFSU.PenguinClicker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Penguin Clicker";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -314,7 +314,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = SFSU.PenguinClicker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Penguin Clicker";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
