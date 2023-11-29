@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Game: View {
-    @State private var clickCount = 0
+    @State private var clickCount: Int = UserDefaults.standard.integer(forKey: "penguinCoinCount")
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -19,6 +19,7 @@ struct Game: View {
                 .frame(width: 150, height: 150)
                 .onTapGesture {
                     clickCount += 1
+                    UserDefaults.standard.set(clickCount, forKey: "penguinCoinCount")
                 }
 
             Text("Coins: \(clickCount)")
