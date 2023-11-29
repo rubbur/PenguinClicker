@@ -42,7 +42,8 @@ struct Game: View {
     }
 
     private func saveCoinCount() {
-        do {
+        /*
+         do {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
             let players = try viewContext.fetch(request) as! [Player]
 
@@ -57,10 +58,11 @@ struct Game: View {
         } catch {
             print("Error saving coin count: \(error.localizedDescription)")
         }
+        */
     }
 
     private func loadCoinCount() {
-        do {
+        /*do {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
             let players = try viewContext.fetch(request) as! [Player]
 
@@ -70,6 +72,7 @@ struct Game: View {
         } catch {
             print("Error loading coin count: \(error.localizedDescription)")
         }
+        */
     }
 }
 
