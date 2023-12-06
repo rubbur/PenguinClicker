@@ -46,7 +46,6 @@
 		74865B652B04AABA00ED214C = {
 			isa = PBXGroup;
 			children = (
-				74CCDC9D2B16EAC400843CE2 /* PenguinClickerModel.xcdatamodeld */,
 				74865B702B04AABA00ED214C /* PenguinClicker */,
 				74865B6F2B04AABA00ED214C /* Products */,
 			);
@@ -63,6 +62,7 @@
 		74865B702B04AABA00ED214C /* PenguinClicker */ = {
 			isa = PBXGroup;
 			children = (
+				74CCDC9D2B16EAC400843CE2 /* PenguinClickerModel.xcdatamodeld */,
 				74CCDC992B04CB0300843CE2 /* penguin.png */,
 				74CCDC8D2B04B13700843CE2 /* StartMenu.swift */,
 				74865B712B04AABA00ED214C /* PenguinClickerApp.swift */,
