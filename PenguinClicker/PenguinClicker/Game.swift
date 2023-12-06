@@ -33,6 +33,7 @@ struct Game: View {
     @State private var clickRate: Int = 1
     @State private var passiveRate: Int = 0
     @State private var showNotEnoughCoinsAlert = false
+    @State private var timer: Timer?
     @ObservedObject private var userDataManager = UserDataManager.shared
     @Environment(\.presentationMode) var presentationMode
 
@@ -103,9 +104,25 @@ struct Game: View {
         .navigationBarItems(leading: BackButton())
         .onAppear {
             clickCount = userDataManager.coinCount
+            startPassiveIncomeTimer()
+        }
+        .onDisappear {
+            stopPassiveIncomeTimer()
         }
     }
 }
+
+private func startPassiveIncomeTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            clickCount += passiveRate
+            userDataManager.coinCount += passiveRate
+        }
+    }
+
+private func stopPassiveIncomeTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
 
 struct BackButton: View {
     @Environment(\.presentationMode) var presentationMode
