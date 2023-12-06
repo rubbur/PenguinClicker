@@ -110,19 +110,20 @@ struct Game: View {
             stopPassiveIncomeTimer()
         }
     }
-}
-
-private func startPassiveIncomeTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            clickCount += passiveRate
-            userDataManager.coinCount += passiveRate
+    
+    private func startPassiveIncomeTimer() {
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+                clickCount += passiveRate
+                userDataManager.coinCount += passiveRate
+            }
         }
-    }
 
-private func stopPassiveIncomeTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
+    private func stopPassiveIncomeTimer() {
+            timer?.invalidate()
+            timer = nil
+        }
+
+}
 
 struct BackButton: View {
     @Environment(\.presentationMode) var presentationMode
