@@ -35,15 +35,22 @@ struct Game: View {
                 .frame(width: 150, height: 150)
                 .onTapGesture {
                     clickCount += 1
-                    userDataManager.coinCount = clickCount
+                    userDataManager.coinCount += 1
                 }
 
-            Text("Coins: \(userDataManager.coinCount)")
+            Text("Coins: \(clickCount)")
                 .font(.headline)
                 .padding()
             
             Text("Click here to hire Grandpa (100 Coins)")
                 .padding()
+                .onTapGesture {
+                    if(userDataManager.coinCount>=100 &&
+                        clickCount>=100){
+                        clickCount-=100
+                        userDataManager.coinCount-=100
+                    }
+                }
             
             Spacer()
 
