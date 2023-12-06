@@ -12,7 +12,14 @@ class UserDataManager: ObservableObject {
 
     private init() {}
 
-    @AppStorage("coinCount") var coinCount: Int = 0
+    var coinCount: Int {
+        get {
+            UserDefaults.standard.integer(forKey: "coinCount")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "coinCount")
+        }
+    }
 }
 
 struct Game: View {
