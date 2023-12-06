@@ -24,6 +24,7 @@ class UserDataManager: ObservableObject {
 
 struct Game: View {
     @State private var clickCount: Int = 0
+    @State private var showNotEnoughCoinsAlert = false
     @ObservedObject private var userDataManager = UserDataManager.shared
     @Environment(\.presentationMode) var presentationMode
 
@@ -55,6 +56,7 @@ struct Game: View {
                 }
                 .alert(isPresented: $showNotEnoughCoinsAlert) {
                     Alert(
+                        title: Text("Could not purchase"),
                         message: Text("You need more coins."),
                         dismissButton: .default(Text("OK"))
                     )
@@ -73,6 +75,7 @@ struct Game: View {
                 }
                 .alert(isPresented: $showNotEnoughCoinsAlert) {
                     Alert(
+                        title: Text("Could not purchase"),
                         message: Text("You need more coins."),
                         dismissButton: .default(Text("OK"))
                     )
