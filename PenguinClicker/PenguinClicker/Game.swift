@@ -49,7 +49,15 @@ struct Game: View {
                         clickCount>=25){
                         clickCount-=25
                         userDataManager.coinCount-=25
+                    } else {
+                        showNotEnoughCoinsAlert = true
                     }
+                }
+                .alert(isPresented: $showNotEnoughCoinsAlert) {
+                    Alert(
+                        message: Text("You need more coins."),
+                        dismissButton: .default(Text("OK"))
+                    )
                 }
             
             Text("Click here to hire Grandpa (100 Coins)")
@@ -59,7 +67,15 @@ struct Game: View {
                         clickCount>=100){
                         clickCount-=100
                         userDataManager.coinCount-=100
+                    } else {
+                        showNotEnoughCoinsAlert = true
                     }
+                }
+                .alert(isPresented: $showNotEnoughCoinsAlert) {
+                    Alert(
+                        message: Text("You need more coins."),
+                        dismissButton: .default(Text("OK"))
+                    )
                 }
             
             Spacer()
