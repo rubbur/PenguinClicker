@@ -43,6 +43,14 @@ struct StartMenu: View {
                     
                     // Other content
                     
+                    Text("CLICK TO RESET ALL PROGRESS")
+                        .padding()
+                        .onTapGesture {
+                            UserDefaults.standard.set(0, forKey: "coinCount")
+                            UserDefaults.standard.set(1, forKey: "clickRate")
+                            UserDefaults.standard.set(0, forKey: "passiveRate")
+                        }
+
                     // Footer
                     Text("Michael Mathews - CSC680-01")
                         .font(.footnote)

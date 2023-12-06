@@ -13,17 +13,25 @@ class UserDataManager: ObservableObject {
     private init() {}
 
     var coinCount: Int {
-        get {
-            UserDefaults.standard.integer(forKey: "coinCount")
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: "coinCount")
-        }
+        get { UserDefaults.standard.integer(forKey: "coinCount") }
+        set { UserDefaults.standard.set(newValue, forKey: "coinCount") }
+    }
+
+    var clickRate: Int {
+        get { UserDefaults.standard.integer(forKey: "clickRate") }
+        set { UserDefaults.standard.set(newValue, forKey: "clickRate") }
+    }
+
+    var passiveRate: Int {
+        get { UserDefaults.standard.integer(forKey: "passiveRate") }
+        set { UserDefaults.standard.set(newValue, forKey: "passiveRate") }
     }
 }
 
 struct Game: View {
     @State private var clickCount: Int = 0
+    @State private var clickRate: Int = 1
+    @State private var passiveRate: Int = 0
     @State private var showNotEnoughCoinsAlert = false
     @ObservedObject private var userDataManager = UserDataManager.shared
     @Environment(\.presentationMode) var presentationMode
@@ -35,8 +43,8 @@ struct Game: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 150)
                 .onTapGesture {
-                    clickCount += 1
-                    userDataManager.coinCount += 1
+                    clickCount += clickRate
+                    userDataManager.coinCount += clickRate
                 }
 
             Text("Coins: \(clickCount)")
@@ -50,6 +58,8 @@ struct Game: View {
                         clickCount>=25){
                         clickCount-=25
                         userDataManager.coinCount-=25
+                        clickRate+=1
+                        userDataManager.clickRate+=1
                     } else {
                         showNotEnoughCoinsAlert = true
                     }
@@ -69,6 +79,8 @@ struct Game: View {
                         clickCount>=100){
                         clickCount-=100
                         userDataManager.coinCount-=100
+                        passiveRate+=1
+                        userDataManager.passiveRate+=1
                     } else {
                         showNotEnoughCoinsAlert = true
                     }
