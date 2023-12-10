@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StartMenu: View {
     @State private var isGameViewPresented = false
+    @State private var showAlert = false
 
     var body: some View {
         NavigationView {
@@ -71,12 +72,15 @@ struct StartMenu: View {
             }
         }
     }
+    
     private func resetProgress() {
                 UserDefaults.standard.set(0, forKey: "coinCount")
                 UserDefaults.standard.set(1, forKey: "clickRate")
                 UserDefaults.standard.set(0, forKey: "passiveRate")
-            }
+    }
 }
+
+
 
 struct StartMenu_Previews: PreviewProvider {
     static var previews: some View {
