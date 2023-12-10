@@ -7,4 +7,5 @@ Penguin Clicker is an iOS game where you click to earn coins. After earning enou
 ![image](https://github.com/rubbur/PenguinClicker/assets/33476040/c6730dbc-1efb-4768-b20d-b40526f86813)
 
 Issues: 
-- Core Data causes the game to crash on startup.
+- Core Data causes the app to crash on startup.
+- Even used Macbooks are expensive so I emulated macOS which was difficult at best.
