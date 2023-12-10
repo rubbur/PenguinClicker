@@ -104,6 +104,8 @@ struct Game: View {
         .navigationBarItems(leading: BackButton())
         .onAppear {
             clickCount = userDataManager.coinCount
+            clickRate = userDataManager.clickRate
+            passiveRate = userDataManager.passiveRate
             startPassiveIncomeTimer()
         }
         .onDisappear {
