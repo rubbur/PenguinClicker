@@ -12,8 +12,6 @@
 		74865B792B04AABF00ED214C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74865B782B04AABF00ED214C /* Preview Assets.xcassets */; };
 		74865B7B2B04AABF00ED214C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74865B7A2B04AABF00ED214C /* Persistence.swift */; };
 		74865B7E2B04AABF00ED214C /* PenguinClicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74865B7C2B04AABF00ED214C /* PenguinClicker.xcdatamodeld */; };
-		74C02E5A2B2548E60006D720 /* Player+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C02E582B2548E60006D720 /* Player+CoreDataClass.swift */; };
-		74C02E5B2B2548E60006D720 /* Player+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C02E592B2548E60006D720 /* Player+CoreDataProperties.swift */; };
 		74CCDC8E2B04B13700843CE2 /* StartMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCDC8D2B04B13700843CE2 /* StartMenu.swift */; };
 		74CCDC912B04C1C900843CE2 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCDC902B04C1C800843CE2 /* Game.swift */; };
 		74CCDC9A2B04CB0300843CE2 /* penguin.png in Resources */ = {isa = PBXBuildFile; fileRef = 74CCDC992B04CB0300843CE2 /* penguin.png */; };
@@ -27,8 +25,6 @@
 		74865B7A2B04AABF00ED214C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		74865B7D2B04AABF00ED214C /* PenguinClicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PenguinClicker.xcdatamodel; sourceTree = "<group>"; };
 		74865B7F2B04AABF00ED214C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74C02E582B2548E60006D720 /* Player+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataClass.swift"; sourceTree = "<group>"; };
-		74C02E592B2548E60006D720 /* Player+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		74CCDC8D2B04B13700843CE2 /* StartMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMenu.swift; sourceTree = "<group>"; };
 		74CCDC902B04C1C800843CE2 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		74CCDC992B04CB0300843CE2 /* penguin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = penguin.png; sourceTree = "<group>"; };
@@ -64,7 +60,6 @@
 		74865B702B04AABA00ED214C /* PenguinClicker */ = {
 			isa = PBXGroup;
 			children = (
-				74C02E5E2B2549A00006D720 /* Model */,
 				74CCDC992B04CB0300843CE2 /* penguin.png */,
 				74CCDC8D2B04B13700843CE2 /* StartMenu.swift */,
 				74865B712B04AABA00ED214C /* PenguinClickerApp.swift */,
@@ -84,15 +79,6 @@
 				74865B782B04AABF00ED214C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		74C02E5E2B2549A00006D720 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				74C02E582B2548E60006D720 /* Player+CoreDataClass.swift */,
-				74C02E592B2548E60006D720 /* Player+CoreDataProperties.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,10 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C02E5A2B2548E60006D720 /* Player+CoreDataClass.swift in Sources */,
 				74865B7B2B04AABF00ED214C /* Persistence.swift in Sources */,
 				74CCDC912B04C1C900843CE2 /* Game.swift in Sources */,
-				74C02E5B2B2548E60006D720 /* Player+CoreDataProperties.swift in Sources */,
 				74CCDC8E2B04B13700843CE2 /* StartMenu.swift in Sources */,
 				74865B7E2B04AABF00ED214C /* PenguinClicker.xcdatamodeld in Sources */,
 				74865B722B04AABA00ED214C /* PenguinClickerApp.swift in Sources */,
