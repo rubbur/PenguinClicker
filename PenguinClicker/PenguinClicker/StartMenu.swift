@@ -46,9 +46,17 @@ struct StartMenu: View {
                     Text("CLICK TO RESET ALL PROGRESS")
                         .padding()
                         .onTapGesture {
-                            UserDefaults.standard.set(0, forKey: "coinCount")
-                            UserDefaults.standard.set(1, forKey: "clickRate")
-                            UserDefaults.standard.set(0, forKey: "passiveRate")
+                            showAlert = true
+                        }
+                        .alert(isPresented: $showAlert) {
+                            Alert(
+                                title: Text("Reset Progress"),
+                                message: Text("Are you sure you want to reset all progress?"),
+                                primaryButton: .destructive(Text("Reset")) {
+                                    resetProgress()
+                                },
+                                secondaryButton: .cancel()
+                            )
                         }
 
                     // Footer
@@ -63,6 +71,11 @@ struct StartMenu: View {
             }
         }
     }
+    private func resetProgress() {
+                UserDefaults.standard.set(0, forKey: "coinCount")
+                UserDefaults.standard.set(1, forKey: "clickRate")
+                UserDefaults.standard.set(0, forKey: "passiveRate")
+            }
 }
 
 struct StartMenu_Previews: PreviewProvider {
