@@ -78,9 +78,6 @@ struct StartMenu: View {
             .onAppear(){
                 playSound()
             }
-            .onDisappear {
-                stopSound()
-            }   
         }
     }
     

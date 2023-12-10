@@ -11,7 +11,7 @@ class SoundEffectPlayer {
     private init() {}
 
     func playCoinSound() {
-        playSound(fileName: "Sounds/coins", fileType: "mp3")
+        playSound(fileName: "coins", fileType: "mp3")
     }
 
     private func playSound(fileName: String, fileType: String) {

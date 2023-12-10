@@ -49,13 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7423211F2B256AB8007E43DB /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		74865B652B04AABA00ED214C = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +68,8 @@
 		74865B702B04AABA00ED214C /* PenguinClicker */ = {
 			isa = PBXGroup;
 			children = (
-				742321282B256C45007E43DB /* coins.mp3 */,
 				7423212B2B256C4A007E43DB /* music.mp3 */,
+				742321282B256C45007E43DB /* coins.mp3 */,
 				74865B752B04AABF00ED214C /* Assets.xcassets */,
 				7423212C2B256C51007E43DB /* AudioPlayer.swift */,
 				74CCDC902B04C1C800843CE2 /* Game.swift */,
@@ -87,7 +80,6 @@
 				74865B712B04AABA00ED214C /* PenguinClickerApp.swift */,
 				74865B7A2B04AABF00ED214C /* Persistence.swift */,
 				74865B772B04AABF00ED214C /* Preview Content */,
-				7423211F2B256AB8007E43DB /* Sounds */,
 				74CCDC8D2B04B13700843CE2 /* StartMenu.swift */,
 			);
 			path = PenguinClicker;
