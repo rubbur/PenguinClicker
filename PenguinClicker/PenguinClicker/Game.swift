@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
 
 class UserDataManager: ObservableObject {
     static let shared = UserDataManager()
@@ -104,11 +103,7 @@ struct Game: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: BackButton())
         .onAppear {
-            if let player = fetchPlayer() {
-                clickCount = Int(player.coinCount)
-            } else {
-                createPlayer()
-            }
+            clickCount = userDataManager.coinCount
             startPassiveIncomeTimer()
         }
         .onDisappear {
@@ -128,32 +123,6 @@ struct Game: View {
             timer = nil
         }
 
-    private func fetchPlayer() -> Player? {
-        // Fetch Player entity from Core Data
-        let request = NSFetchRequest<Player>(entityName: "Player")
-
-        do {
-            let players = try PersistenceController.shared.viewContext.fetch(request)
-            return players.first
-        } catch {
-            print("Error fetching Player: \(error.localizedDescription)")
-            return nil
-        }
-    }
-
-    private func createPlayer() {
-        // Create Player entity in Core Data
-        let newPlayer = Player(context: PersistenceController.shared.viewContext)
-        newPlayer.coinCount = 0  // Set initial value
-        PersistenceController.shared.saveContext()
-    }
-
-    private func updateCoinCount(_ amount: Int) {
-    if let player = fetchPlayer() {
-        player.coinCount += Int16(amount)
-        PersistenceController.shared.saveContext()
-    }
-}
 }
 
 struct BackButton: View {
