@@ -16,6 +16,7 @@ Issues:
 - Attempting to use Core Data causes the app to crash on startup.
 - Even used Macbooks are expensive so I emulated macOS which was difficult at best.
 - Outdated macOS and Xcode versions meaning less features available.
+- Audio don't play when the files are moved to a subdirectory.
 <br>
 
 ![image](https://github.com/rubbur/PenguinClicker/assets/33476040/c6730dbc-1efb-4768-b20d-b40526f86813)
