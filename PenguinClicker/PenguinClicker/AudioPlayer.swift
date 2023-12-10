@@ -25,4 +25,9 @@ class AudioPlayer: ObservableObject {
             print("Error initializing audio player: \(error.localizedDescription)")
         }
     }
+    
+    func play(){
+        audioPlayer?.play()
+    }
 }
+

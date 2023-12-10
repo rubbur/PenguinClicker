@@ -10,6 +10,7 @@
 		742321292B256C46007E43DB /* coins.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 742321282B256C45007E43DB /* coins.mp3 */; };
 		7423212D2B256C51007E43DB /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423212C2B256C51007E43DB /* AudioPlayer.swift */; };
 		742321302B256C58007E43DB /* SoundEffectPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423212F2B256C58007E43DB /* SoundEffectPlayer.swift */; };
+		742321332B257BAC007E43DB /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7423212B2B256C4A007E43DB /* music.mp3 */; };
 		74865B722B04AABA00ED214C /* PenguinClickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74865B712B04AABA00ED214C /* PenguinClickerApp.swift */; };
 		74865B762B04AABF00ED214C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74865B752B04AABF00ED214C /* Assets.xcassets */; };
 		74865B792B04AABF00ED214C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74865B782B04AABF00ED214C /* Preview Assets.xcassets */; };
@@ -157,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742321332B257BAC007E43DB /* music.mp3 in Resources */,
 				742321292B256C46007E43DB /* coins.mp3 in Resources */,
 				74CCDC9A2B04CB0300843CE2 /* penguin.png in Resources */,
 				74865B792B04AABF00ED214C /* Preview Assets.xcassets in Resources */,

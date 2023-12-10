@@ -71,6 +71,9 @@ struct StartMenu: View {
                 .navigationBarHidden(true)
                 .navigationTitle("")
             }
+            .onAppear(){
+                AudioPlayer.shared.play()
+            }
         }
     }
     
