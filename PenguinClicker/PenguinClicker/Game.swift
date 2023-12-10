@@ -8,10 +8,6 @@
 import SwiftUI
 import CoreData
 
-public class Player: NSManagedObject {
-    @NSManaged public var coinCount: Int
-}
-
 class UserDataManager: ObservableObject {
     static let shared = UserDataManager()
 
