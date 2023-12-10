@@ -54,7 +54,7 @@ struct Game: View {
                 .font(.headline)
                 .padding()
             
-            Text("Click here to buy a Pickaxe (25 Coins)")
+            Text("Buy a Pickaxe (25 Coins)")
                 .padding()
                 .onTapGesture {
                     if(userDataManager.coinCount>=25 &&
@@ -76,7 +76,7 @@ struct Game: View {
                     )
                 }
             
-            Text("Click here to hire Grandpa (100 Coins)")
+            Text("Hire Grandpa (100 Coins)")
                 .padding()
                 .onTapGesture {
                     if(userDataManager.coinCount>=100 &&
