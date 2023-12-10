@@ -35,6 +35,8 @@ struct Game: View {
     @State private var showNotEnoughCoinsAlert = false
     @State private var timer: Timer?
     @ObservedObject private var userDataManager = UserDataManager.shared
+    @ObservedObject private var audioPlayer = AudioPlayer.shared
+    @State private var soundEffectPlayer = SoundEffectPlayer.shared
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -61,6 +63,7 @@ struct Game: View {
                         userDataManager.coinCount-=25
                         clickRate+=1
                         userDataManager.clickRate+=1
+                        soundEffectPlayer.playCoinSound()
                     } else {
                         showNotEnoughCoinsAlert = true
                     }
@@ -82,6 +85,7 @@ struct Game: View {
                         userDataManager.coinCount-=100
                         passiveRate+=1
                         userDataManager.passiveRate+=1
+                        soundEffectPlayer.playCoinSound()
                     } else {
                         showNotEnoughCoinsAlert = true
                     }
