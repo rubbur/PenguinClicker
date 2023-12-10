@@ -11,7 +11,9 @@ import AVFoundation
 struct StartMenu: View {
     @State private var isGameViewPresented = false
     @State private var showAlert = false
-    var player: AVAudioPlayer?
+    @State private var player: AVAudioPlayer?
+    
+    //var player: AVAudioPlayer?
     //@ObservedObject private var audioPlayer = AudioPlayer.shared
 
     var body: some View {
@@ -89,7 +91,7 @@ struct StartMenu: View {
     }
 
     func playSound() {
-        guard let path = Bundle.main.path(forResource: "Sounds/music", ofType: "mp3") else {
+        guard let path = Bundle.main.path(forResource: "music", ofType: "mp3") else {
             return
         }
         let url = URL(fileURLWithPath: path)

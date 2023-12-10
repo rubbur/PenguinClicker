@@ -52,8 +52,6 @@
 		7423211F2B256AB8007E43DB /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				742321282B256C45007E43DB /* coins.mp3 */,
-				7423212B2B256C4A007E43DB /* music.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -77,6 +75,8 @@
 		74865B702B04AABA00ED214C /* PenguinClicker */ = {
 			isa = PBXGroup;
 			children = (
+				742321282B256C45007E43DB /* coins.mp3 */,
+				7423212B2B256C4A007E43DB /* music.mp3 */,
 				74865B752B04AABF00ED214C /* Assets.xcassets */,
 				7423212C2B256C51007E43DB /* AudioPlayer.swift */,
 				74CCDC902B04C1C800843CE2 /* Game.swift */,
