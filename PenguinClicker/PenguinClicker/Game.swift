@@ -50,6 +50,14 @@ struct Game: View {
                     userDataManager.coinCount += clickRate
                 }
 
+            Text("Coins earned per click: \(clickRate)")
+                .font(.headline)
+                .padding()
+
+            Text("Passive income: \(passiveRate) coins per second")
+                .font(.headline)
+                .padding()
+
             Text("Coins: \(clickCount)")
                 .font(.headline)
                 .padding()
