@@ -76,6 +76,9 @@ struct StartMenu: View {
             .onAppear(){
                 playSound()
             }
+            .onDisappear {
+                stopSound()
+            }   
         }
     }
     
@@ -86,18 +89,23 @@ struct StartMenu: View {
     }
 
     func playSound() {
-    guard let path = Bundle.main.path(forResource: "Sounds/music", ofType:"mp3") else {
-        return }
-    let url = URL(fileURLWithPath: path)
+        guard let path = Bundle.main.path(forResource: "Sounds/music", ofType: "mp3") else {
+            return
+        }
+        let url = URL(fileURLWithPath: path)
 
-    do {
-        player = try AVAudioPlayer(contentsOf: url)
-        player?.play()
-        
-    } catch let error {
-        print(error.localizedDescription)
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
-}
+
+    func stopSound() {
+        player?.stop()
+        player = nil
+    }
 }
 
 
