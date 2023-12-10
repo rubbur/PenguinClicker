@@ -10,6 +10,7 @@ import SwiftUI
 struct StartMenu: View {
     @State private var isGameViewPresented = false
     @State private var showAlert = false
+    @ObservedObject private var audioPlayer = AudioPlayer.shared
 
     var body: some View {
         NavigationView {
