@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct StartMenu: View {
     @State private var isGameViewPresented = false
     @State private var showAlert = false
-    @ObservedObject private var audioPlayer = AudioPlayer.shared
+    var player: AVAudioPlayer?
+    //@ObservedObject private var audioPlayer = AudioPlayer.shared
 
     var body: some View {
         NavigationView {
@@ -72,7 +74,7 @@ struct StartMenu: View {
                 .navigationTitle("")
             }
             .onAppear(){
-                AudioPlayer.shared.play()
+                playSound()
             }
         }
     }
@@ -82,6 +84,20 @@ struct StartMenu: View {
                 UserDefaults.standard.set(1, forKey: "clickRate")
                 UserDefaults.standard.set(0, forKey: "passiveRate")
     }
+
+    func playSound() {
+    guard let path = Bundle.main.path(forResource: "Sounds/music", ofType:"mp3") else {
+        return }
+    let url = URL(fileURLWithPath: path)
+
+    do {
+        player = try AVAudioPlayer(contentsOf: url)
+        player?.play()
+        
+    } catch let error {
+        print(error.localizedDescription)
+    }
+}
 }
 
 
