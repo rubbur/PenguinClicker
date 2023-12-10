@@ -150,7 +150,7 @@ struct Game: View {
 
     private func updateCoinCount(_ amount: Int) {
     if let player = fetchPlayer() {
-        player.coinCount += Int16(amount)
+        player.coinCount += Int32(amount)
         PersistenceController.shared.saveContext()
     }
 }
