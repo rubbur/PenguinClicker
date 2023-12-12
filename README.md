@@ -11,6 +11,7 @@ Features:
 - Upgrades.
 - Ability to reset progress.
 - Main menu that allows a tap gesture to go to the game view.
+- Custom app icon.
 
 Issues: 
 - Attempting to use Core Data causes the app to crash on startup.
