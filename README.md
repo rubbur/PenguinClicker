@@ -9,6 +9,7 @@ Features:
 - Saved data using UserDefaults.
 - Real-time updating coin counter.
 - Upgrades.
+- Animations on tapping the penguin.
 - Ability to reset progress.
 - Main menu that allows a tap gesture to go to the game view.
 - Music and sound effects for purchasing.
