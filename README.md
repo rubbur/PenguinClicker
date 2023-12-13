@@ -11,6 +11,7 @@ Features:
 - Upgrades.
 - Ability to reset progress.
 - Main menu that allows a tap gesture to go to the game view.
+- Music and sound effects for purchasing.
 - Custom app icon.
 
 Issues: 
