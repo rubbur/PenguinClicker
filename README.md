@@ -15,7 +15,7 @@ Features:
 - Custom app icon.
 
 Issues: 
-- Attempting to use Core Data causes the app to crash on startup.
+- Attempting to use Core Data causes the app to crash on startup. The goal was to have a Core Data entity called Player that had attributes for things such as coinCount. 
 - Even used Macbooks are expensive so I emulated macOS which was difficult at best.
 - Outdated macOS and Xcode versions meaning less features available.
 - Audio doesn't play when the files are moved to a subdirectory.
