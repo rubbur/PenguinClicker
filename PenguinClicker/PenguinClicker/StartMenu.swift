@@ -11,6 +11,7 @@ import AVFoundation
 struct StartMenu: View {
     @State private var isGameViewPresented = false
     @State private var showAlert = false
+    @State private var penguinAnimation: Bool = false
     @State private var player: AVAudioPlayer?
     
     //var player: AVAudioPlayer?
@@ -36,7 +37,12 @@ struct StartMenu: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 200, height: 200)
+                        .scaleEffect(penguinAnimation ? 1.2 : 1)
+                        .animation(.easeInOut(duration:0.2))
                         .onTapGesture {
+                            withAnimation {
+                                penguinAnimation.toggle()
+                            }
                             isGameViewPresented = true
                         }
                     
@@ -77,6 +83,9 @@ struct StartMenu: View {
             }
             .onAppear(){
                 playSound()
+            }
+            .onDisappear(){
+                penguinAnimation = false
             }
         }
     }

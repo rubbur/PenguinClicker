@@ -37,6 +37,7 @@ struct Game: View {
     @ObservedObject private var userDataManager = UserDataManager.shared
     @ObservedObject private var audioPlayer = AudioPlayer.shared
     @State private var soundEffectPlayer = SoundEffectPlayer.shared
+    @State private var penguinAnimation2: Bool = false
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -45,7 +46,17 @@ struct Game: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 150)
+                .scaleEffect(penguinAnimation2 ? 1.2 : 1)
+                .animation(.easeInOut(duration:0.2))
                 .onTapGesture {
+                    withAnimation {
+                        penguinAnimation2.toggle()
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                        withAnimation {
+                            penguinAnimation2.toggle()
+                        }
+                    }
                     clickCount += clickRate
                     userDataManager.coinCount += clickRate
                 }
